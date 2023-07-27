@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export const Card = ({img, name, types, onClick}) => {
+  console.log(name)
   return (
     <div>
       <Link href={'/${name}'} className='bg-white hover:drop-shadow-md cursor-pointer' onClick={onClick}>
@@ -15,12 +16,11 @@ export const Card = ({img, name, types, onClick}) => {
           {/* card types */}
           <div className="flex items-center gap-4 mt-8">
             <h2 className="text-lg">Type:</h2>
-            {types.map((t) => (
+            {types?.map((t) => (
               <span key={t.type.name} className="type">
                 {t.type.name}
               </span>
             ))}
-              
           </div>
         </div>
       </Link>

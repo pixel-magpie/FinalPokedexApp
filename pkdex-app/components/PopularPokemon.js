@@ -16,15 +16,9 @@ export const PopularPokemon = () => {
             <h1 className="py-4 text-2xl">The Most Popular Pokemon</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-[400px] md:w-[100%] mx-auto">
-          {popularPokemon.map((p) => <Card key={p.name} img={p.sprites.front_default} name={p.name}/>)}
+          {popularPokemon.map((p) => <Card key={p.name} img={p.sprites.front_default} name={p.name} type={p.types.type}/>)}
         </div>
       </div>
-
-    {/* <div className="items-center p-7 m-2 h-4 w-80 bg-white border-2 border-black rounded-xl shadow-md flex" id="container">
-        <div>
-          <h2 className="text-2xl capitalize bg-white ">Name</h2>
-        </div>
-      </div> */}
     </div>
   )
 }
