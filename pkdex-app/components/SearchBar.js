@@ -4,12 +4,13 @@ export const SearchBar = () => {
 
   const [input, setInput] = useState("");
 
-  const fetchData = (value) => {
-    fetch('https://pokeapi.co/api/v2/pokemon/').then((response) => response.json()).then((json) => {
-      console.log(json);
-    });  
-  };
+  // const fetchData = (value) => {
+  //   fetch('https://pokeapi.co/api/v2/pokemon/').then((response) => response.json()).then((json) => {
+  //     console.log(json);
+  //   });  
+  // };
 
+  
   const handleChange = (value) => {
     setInput(value);
     fetchData(value);
